@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru-Ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lab24-26 - Modern JavaScript</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab24-26 - Modern JavaScript</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>Lab 24-26 - Modern JavaScript</h1>
-    <h2>Современный JavaScript</h2>
-  </div>
-  <script type="module" src="js/math.js"></script>
+    <div class="container">
+        <h1>Lab 24-26 - Modern JavaScript</h1>
+        <h2>Менеджер задач</h2>
+
+        <div class="task-form">
+            <h3>Добавить новую задачу</h3>
+            <input type="text" id="taskInput" placeholder="Введите задачу..."/>
+            <button id="addTask">добавить</button>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="active">Активные</button>
+            <button class="filter-btn" data-filter="completed">Завершенные</button>
+        </div>
+        <div id="taskList" class="task-List"></div>
+        <div class="stats">
+            <p>Всего задач: <span id="totalTasks">0</span></p>
+            <p>Выполнено: <span id="completedTasks">0</span></p>
+        </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
